@@ -135,7 +135,7 @@ public class TestRandomCharacter {
             }
             // Check if it is a prime number, however
             // this means that the test case only passes
-            // if EVERY digit is prime
+            // if EVERY digit is a prime
             assertTrue(compareFlag);
 
             // if (compareFlag) { assertTrue(compareFlag); }
