@@ -1,4 +1,5 @@
 package Lab_9;
+
 import java.util.Random;
 
 public class RandomCharacter {

@@ -20,7 +20,7 @@ public class TestRandomCharacter {
     public String charString;
     public char compareChar;
     public int comparePrime;
-    public boolean compareFlag = true;
+    public boolean compareFlag;
 
     // Runs before each test
     @BeforeEach
@@ -121,18 +121,22 @@ public class TestRandomCharacter {
             // Convert the char into a numerical value
             comparePrime = Character.getNumericValue(compareChar);
 
-            // A loop to check if the number is divisible
-            // by any number from 2 to number / 2
-            for (int j = 2; j <= comparePrime / 2; j++) {
-                // If the number is divisible by another number,
-                // it is not a prime number
-                if (comparePrime % j == 0) {
-                    // Set the flag to be false
-                    compareFlag = false;
-                    // Break out of the loop
-                    break;
+            if (comparePrime > 1) {
+                compareFlag = true;
+                // A loop to check if the number is divisible
+                // by any number from 2 to number / 2
+                for (int j = 2; j <= comparePrime / 2; j++) {
+                    // If the number is divisible by another number,
+                    // it is not a prime number
+                    if (comparePrime % j == 0) {
+                        // Set the flag to be false
+                        compareFlag = false;
+                        // Break out of the loop
+                        break;
+                    }
                 }
             }
+            else { compareFlag = false; }
             // Check if it is a prime number, however
             // this means that the test case only passes
             // if EVERY digit is a prime
