@@ -121,6 +121,8 @@ public class TestRandomCharacter {
             // Convert the char into a numerical value
             comparePrime = Character.getNumericValue(compareChar);
 
+            // If the number is either 1 or 0, it is
+            // definitely not a prime
             if (comparePrime > 1) {
                 compareFlag = true;
                 // A loop to check if the number is divisible
